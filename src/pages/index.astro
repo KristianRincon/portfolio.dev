@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro"
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Experience from "../components/Experience.astro"
+import CodeIcon from "../components/icons/Code.astro"
+import Projects from "../components/Projects.astro"
+---
+
+<Layout 
+  title="Portafolio de Kristian - Desarrollador y Programador Web."
+  description="Contrata a Kristian para crear tu aplicación web o de escritorio. Desarrollador BacKend. Especializado en crear aplicaciones únicas"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://avatars.githubusercontent.com/u/93852583?v=4"
+        alt="kristian photo"
+      />
+
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hey, soy Kristian
+        <a
+          href="https://www.linkedin.com/in/kristian-danilo-rinc%C3%B3n-gonz%C3%A1lez-1a392921b/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>+15 años de experiencia.</span>
+        <span class="text-yellow-200/90"> Desarrollador Web</span>.
+
+        <span class="text-red-200/90">De Boyacá, Colombia.</span>
+
+        <span class="opacity-75">Especializado en crear apps unicas</span>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://www.linkedin.com/in/kristian-danilo-rinc%C3%B3n-gonz%C3%A1lez-1a392921b/"
+        >
+          <LinkedinIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill
+		  href="https://github.com/KristianRincon"
+		>
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+		<SocialPill
+		  href="mailto:krisdaringon@gmail.com"
+		>
+          <MailIcon class="size-4 md:size-6" />
+          krisdaringon@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    
+	<SectionContainer id="experiencia">
+    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <Briefcase class="size-8" />
+      Experiencia
+    </h2>
+		<Experience />
+	</SectionContainer>
+
+
+  <SectionContainer id="proyectos">
+    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <CodeIcon class="size-10" />
+      Proyectos
+    </h2>
+		<Projects />
+	</SectionContainer>
+	  
+  </main>
+</Layout>
